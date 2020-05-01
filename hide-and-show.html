@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      .mybutton {
+      }
+      .list {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mybutton">
+      <button id="toggle">toggle click</button>
+      <button id="toggelButton">try it</button>
+      <div class="list">
+        <ul>
+          <li>home</li>
+          <li>PRACTIC AREA</li>
+          <li>ATTORNEYS</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      /* function myFunction() {
+        listNone();
+        listBlock();
+      }
+      function listNone() {
+        var a = document.querySelector(".list");
+        a.style.display = "none";
+      }
+      function listBlock() {
+        var a = document.querySelector(".list");
+        a.style.display = "block";
+      }*/
+      var newbtn = document.getElementById("toggelButton");
+      var a = document.querySelector(".list");
+      var isclicked = false;
+      newbtn.addEventListener("click", function() {
+        if (isclicked == false) {
+          a.style.display = "none";
+          isclicked = true;
+        } else {
+          a.style.display = "block";
+          isclicked = false;
+        }
+      });
+
+      var btn = document.getElementById("toggle");
+      var isclicked = false;
+      btn.addEventListener("click", function() {
+        if (isclicked == false) {
+          console.log("one");
+          isclicked = true;
+        } else {
+          console.log("two");
+          isclicked = false;
+        }
+      });
+    </script>
+  </body>
+</html>

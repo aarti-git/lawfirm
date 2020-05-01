@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/lawfirm-style.css" />
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.css" />
+    <script>
+      function FormValidation(){
+        var Name = document.getElementById("userName").value;
+        var Email = document.getElementById("userEmail").value;
+        var x = Email.indexOf("@");
+        var Subject = document.getElementById("userSubject").value;
+        var Message = document.getElementById("userMessage").value;
+        
+        if(Name =="" ){
+          alert("Name can not be blank");
+          return false;
+        }
+        else if(x<3){
+           alert(" please ! enter valid email addres !!");
+          return false;
+        }
+        else if(Subject==""){
+          alert("Subject can not be blank");
+          return false;
+        }
+        else if(Message==""){
+          alert("please write your message");
+          return false;
+        }
+        else{
+          alert("THANK YOU " + Name + ". your form successfully submited !");
+          return true;
+        }
+       }
+    </script>
+    <script>
+      function changeVision(show){
+        toggleChatBox(show)
+        toggleChatFooterBar(!show)
+      }
+
+      function toggleChatBox(show) {
+        var display = show ? "block" : 'none'
+        var changeDisplay = document.querySelector(".apply-onclik");
+        changeDisplay.style.display = display;
+      }
+
+      function toggleChatFooterBar(isShow) {
+        var n = document.querySelector(".chat-with-us");
+        n.style.display = isShow ? "block" : 'none';
+      }
+    </script>
+
+    <script>
+     /* function myFunctio() {
+        var menuButton = document.getElementById("myButton");
+        var list = document.querySelector(".mobile-menu-list");
+
+        if (list.style.display === "none") {
+          menuButton.classList.add("menu-cut-bar");
+          list.style.display = "block"
+          console.log("one");
+        }
+        else {
+          menuButton.classList.remove("menu-cut-bar");
+         list.style.display = "none"
+          console.log("two");
+        }
+      }*/
+      var isCliked = false;
+      
+      function myFunctio(){
+        // 
+        var menuButton = document.querySelector(".click-button");
+        var list = document.querySelector(".mobile-menu-list");
+
+        if(isCliked == false){
+          menuButton.classList.add("menu-cut-bar");
+          list.style.display="block";
+          console.log("one");
+          isCliked=true;
+        }else{
+          menuButton.classList.remove("menu-cut-bar");
+          list.style.display = "none";
+          console.log("two");
+          isCliked = false;
+        }
+      }
+    </script>
+    <script>
+      function textOpycity(){
+        var x = document.querySelectorAll(".textopycity");
+        var i;
+        for(i=0; i<x.length; i++){
+          x[i].style.opacity = "1";
+        }
+        }
+       
+    </script>
+  </head>
+  <body onload="textOpycity()">
+    <section>
+      <div class="header">
+        <div class="allabout-company-logo">
+          <img class="company-logo-img" src="img/law-logo-img.webp" />
+          <p>KNOLLWALTERS LLP</p>
+        </div>
+        <div class="header-points">
+          <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="#practice-area">PRACTIC AREA</a></li>
+            <li><a href="#our-vision">OUR VISION</a></li>
+            <li><a href="#attorneys">ATTORNEYS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="mobile-menu-button">
+          <button  onclick="myFunctio()" class="click-button">
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+            <span class="menu-bar"></span>
+          </button>
+        </div>
+      <div class="mobile-menu-list">
+            <ul>
+              <li><a href="">HOME</a></li>
+              <li><a href="#practice-area">PRACTIC AREA</a></li>
+              <li><a href="#our-vision">OUR VISION</a></li>
+              <li><a href="#attorneys">ATTORNEYS</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+      </div>
+    </section>
+    <section class="website-bg">
+      <div class="company-name">
+        <div class="name-formating textopycity">
+          <h2>BOUTIQUE</h2>
+          <h3>LAW FIRM</h3>
+          <p>Specializing in Commercial Law & Litigation,Insolvency & Fraud</p>
+        </div>
+      </div>
+    </section>
+    <section id="practice-area">
+      <div>
+        <div class="heading-practice-area">
+          <span>
+            <h1>PRACTICE</h1>
+            <h2>AREAS</h2>
+          </span>
+        </div>
+
+        <div class="info-practice-area textopycity">
+          <div class="practice-area-imp">
+            <h4 class="creat-font"> LITIGATION </h4>
+            <p>
+              Earum suscipit ipsum laudantium.Quo delectus est. 
+            </p>
+          </div>
+          <div class="practice-area-imp">
+            <h4 class="creat-font"> BUSINESS </h4>
+            <p>
+              Nemo cupiditate ab quibusdam quaerat impedit magni. Earum suscipit
+            </p>
+          </div>
+          <div class="practice-area-imp">
+            <h4 class="creat-font" id="myid"> INSOLVENCY </h4>
+            <p>
+              Nemo cupiditate ab quibusdam quaerat impedit magni. Earum 
+            </p>
+          </div>
+          <div class="practice-area-imp">
+            <h4 class="creat-font">FRAUD</h4>
+            <p>
+              Nemo cupiditate ab Earum suscipit ipsum laudantium.
+            </p>
+          </div>
+          <div class="practice-area-imp">
+            <h4 class="creat-font">DISPUTE RESOLUTION</h4>
+            <p>
+              Nemo cupiditate ab quibusdam quaerat impedit magni. Earum
+            </p>
+          </div>
+          <div class="practice-area-imp">
+            <h4 class="creat-font">TAX</h4>
+            <p>
+              Nemo cupiditate ab Earum suscipit ipsum laudantium.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-wrapper" id="our-vision">
+      <div class="headding-our-vision textopycity">
+        <h1>OUR VISION</h1>
+      </div>
+      <div class="our-vision-text">
+        <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to
+        add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a
+        great place for you to tell a story and let your users know a little more about you.
+      </p>
+      <br>
+      <p>This is a great space to write long text about your company and your services. You can use this space to go into a
+      little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story
+      of how you came up with the idea for your business and what makes you different from your competitors. Make your company
+      stand out and show your visitors who you are.
+    </p>
+    <br>
+    <p>
+      At Wix we’re passionate about making templates that allow you to build fabulous websites and it’s all thanks to the
+      support and feedback from users like you! Keep up to date with New Releases and what’s Coming Soon in Wixellaneous in
+      Support. Feel free to tell us what you think and give us feedback in the Wix Forum.
+    </p>
+    <br>
+      </div>
+    </section>
+    <section>
+      <div class="bg-meeting-img">
+      </div>
+    </section>
+    <section class="profile-wrapper" id="attorneys">
+      <div class="headding-our-attorneys textopycity">
+        <h1>OUR ATTORNEYS</h1>
+      </div>
+      <div class="partner-profile">
+        <div class="allabot-partners">
+          <img class="partner-img" src="img/partner1.webp"/>
+          <h4>AIDEN WALTERS</h4>
+          <p>PARTNER</p>
+          <i>Tel: 123-456-7890<br>info@mysite.com</i>
+          </div>
+        <div class="allabot-partners">
+          <img  class="partner-img"  src="img/partner2.webp" />
+          <h4>JULIA KNOLL</h4>
+          <p>PARTNER</p>
+          <i>Tel: 123-456-7890<br>info@mysite.com</i>
+        </div>
+        <div class="allabot-partners">
+          <img  class="partner-img"  src="img/partner3.webp" />
+          <h4>JAMES LOPEZ</h4>
+          <p>PARTNER</p>
+          <i>Tel: 123-456-7890<br>info@mysite.com</i>
+        </div>
+      </div>
+    </section>
+    <section class="contact-wrapper" id="contact">
+        <div class="allabout-contact">
+          <div class="contact-heading">
+            <h1>CONTACT<br>KNOLL & WALTERS</h1>
+          </div>
+          <div class="contact-info">
+            <div class="contact-details">
+              <h2><b>OUR</b> ADDRESS</h2>
+              <p>500 Terry Francois St. San Francisco, CA 94158​</p>
+              <p><b>Email</b>: info@mysite.com<br><b>Tel</b>: 123-456-7890</p>
+              <span><a href="">Click here to find us</a></span>
+              <span>For any general inquiries, please fill in the following contact form:</span>
+            </div>
+            <form onsubmit="FormValidation()">
+              <div class="send-email">
+                <div class="partision">
+                  <p>Enter your name *</p>
+                  <input type="text" name="name" placeholder="Name" id="userName"/>
+                  <p>Enter your Email *</p>
+                  <input type="text" name="   " placeholder="Email" id="userEmail" />
+                  <p>Enter your Subject *</p>
+                  <input type="text" name="" placeholder="Subject" id="userSubject"/>
+                </div>
+                <div class="Message-area">
+                  <p>Enter your Subject *</p>
+                  <textarea class="textarea-bg" rows="9" cols="30" placeholder="Message" id="userMessage"></textarea>
+                </div>
+              </div>
+              <input class="submit" type="submit" value="submit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="back-to-top">
+        <button onclick='window.scrollTo({top: 0, behavior: "smooth"});'><i class="fas fa-angle-up"></i></button>
+        <p>BACK TO TOP</p>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="creat-with">
+        <p>© 2023 by Knoll Walters LLP. Proudly created with<a href="wix.html">Wix.com</a></p>
+      </div>
+      <div class="apply-onclik">
+        <div class="your-qustions">
+          <div class="part1-qustion">
+            <button class="cross-button" onclick="changeVision(false);"><i class="fas fa-times"></i></button>
+            <h2>CHAT WITH US</h2>
+            <p>Hi there ! i'm available to anser your qustions.</p>
+            <i><span class="fas fa-bolt"></span>we'll reply soon as we can </i>
+          </div>
+          <div class="chat-midde-space">
+      
+          </div>
+          <div class="sponsor">
+            <p>Powerd by<span>Ascand by wix</span></p>
+          </div>
+          <form class="input-chat-us">
+            <input type="text" placeholder="Type your message" class="my-input1">
+            <div class="attch-files-to-button">
+              <button class="send-font"><i class="fas fa-paper-plane"></i></button>
+              <i class="fas fa-paperclip"></i><input type="file" name='upload' class="my-input2">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="mobile-chat-button">
+        <button onclick="changeVision(true)"><i class="fas fa-comment-alt"></i></button>
+      </div>
+      <div class="chat-with-us">
+        <h4>CHAT WITH US</h4>
+        <p><span class="fas fa-bolt"></span>we'll reply soon as we can </p>
+        <button class="fas fa-chevron-up" onclick="changeVision(true)"></button>
+      </div>
+     
+    </section>
+
+  </body>
+</html>

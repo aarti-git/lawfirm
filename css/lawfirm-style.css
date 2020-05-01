@@ -1,0 +1,826 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+.header {
+  font-family: sans-serif;
+  padding: 15px;
+  background-color: #f9f9fbfc;
+  box-shadow: 0px -2px 4px #929090 inset;
+}
+.allabout-company-logo {
+  display: inline-block;
+  margin-left: 150px;
+}
+.company-logo-img {
+  width: 40px;
+  vertical-align: middle;
+}
+
+.header p {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: serif;
+  color: #00305b;
+  font-size: 22px;
+}
+
+.header-points {
+  display: inline-block;
+  float: right;
+  margin-top: 7px;
+}
+.header-points ul {
+  list-style: none;
+  display: inline-block;
+  margin-right: 80px;
+}
+.header-points a:hover {
+  color: black;
+}
+.header-points li {
+  display: inline-block;
+  font-size: 13px;
+  padding: 6px 15px;
+  color: black;
+}
+.header-points li a {
+  text-decoration: none;
+  color: #1f4e83;
+}
+/* mobile version menu button*/
+.mobile-menu-button {
+  float: right;
+  margin-right: 10px;
+  display: none;
+  position: relative;
+}
+.mobile-menu-button button {
+  background-color: white;
+  outline: none;
+  width: 30px;
+}
+.menu-bar {
+  display: block;
+  height: 3px;
+  background-color: #00305b;
+  border-radius: 20px;
+  width: 100%;
+  margin: 5px 0;
+  transition-duration: 0.5s;
+}
+.menu-bar:first-child {
+  width: 50%;
+  transition-duration: 0.5s;
+}
+.menu-bar:last-child {
+  width: 50%;
+  margin-left: auto;
+  transition-duration: 0.5s;
+}
+.menu-cut-bar .menu-bar {
+  transform: rotate(-46deg);
+  transition-duration: 0.5s;
+}
+.menu-cut-bar .menu-bar:first-child {
+  width: 50%;
+  transform: rotate(47deg) translateX(3px);
+  transition-duration: 0.5s;
+}
+.menu-cut-bar .menu-bar:last-child {
+  width: 50%;
+  transform: rotate(45deg) translateX(-3px);
+  margin-left: auto;
+  transition-duration: 0.5s;
+}
+.mobile-menu-list {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background-color: #f9f9fb;
+  z-index: 2;
+  display: none;
+}
+.mobile-menu-list ul {
+  margin: 42px 20px;
+  list-style: none;
+}
+.mobile-menu-list li {
+  padding: 20px 5px;
+}
+.mobile-menu-list a {
+  text-decoration: none;
+}
+
+.website-bg {
+  background-image: url(../img/building-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 735px;
+  position: relative;
+}
+
+.company-name {
+  background-color: rgba(5, 59, 107, 0.77);
+  width: 550px;
+  height: 100%;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.textopycity {
+  transition-duration: 5s;
+  opacity: 0;
+}
+
+/* @media screen and (max-width: 1024px) {
+  .company-name {
+    background-color: #4a4e84;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .company-name {
+    background-color: aqua;
+  }
+} */
+
+/*
+  min width : >=
+  max width : <=
+
+
+@media screen and (min-width: 651px) {
+  .company-name {
+    background-color: #4a4e84;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .company-name {
+    background-color: aqua;
+  }
+} 
+*/
+
+.name-formating {
+  font-family: sans-serif;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 130px;
+}
+.name-formating h2 {
+  font-size: 60px;
+  font-weight: 100;
+}
+.name-formating h3 {
+  font-size: 40px;
+  font-weight: 100;
+  padding-bottom: 10px;
+}
+.name-formating p {
+  font-size: 20px;
+  width: 350px;
+  line-height: 27px;
+}
+.about-company {
+  margin: 30px;
+}
+.heading-practice-area {
+  display: inline-block;
+  width: 550px;
+  height: 600px;
+  background-color: #eaf4f6;
+  position: relative;
+  color: #0b3259;
+}
+.heading-practice-area span {
+  font-family: sans-serif;
+  padding: 100px 50px;
+  float: right;
+}
+
+.heading-practice-area h1 {
+  font-size: 46px;
+  line-height: 60px;
+}
+
+.heading-practice-area h2 {
+  font-size: 40px;
+  font-weight: 100;
+}
+.info-practice-area {
+  width: 700px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 100px 0px 0px 40px;
+  font-family: sans-serif;
+}
+.practice-area-imp {
+  display: inline-block;
+  margin: 20px 0px 40px 0px;
+  position: relative;
+}
+.creat-font::before {
+  content: " ";
+  background: #5daade;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+.practice-area-imp h4 {
+  font-size: 20px;
+  width: 300px;
+  padding-bottom: 15px;
+  font-weight: 300;
+  color: #00305b;
+  margin-left: 20px;
+}
+.practice-area-imp p {
+  width: 240px;
+  font-size: 14px;
+  display: inline-block;
+  line-height: 27px;
+  color: #285f91;
+  margin-left: 20px;
+}
+/* our vision css*/
+.section-wrapper {
+  width: 100%;
+  background-color: #00305b;
+  color: white;
+  display: table;
+  font-family: sans-serif;
+}
+.headding-our-vision h1 {
+  font-size: 40px;
+  font-weight: 100;
+  margin: 80px;
+  text-align: center;
+}
+.our-vision-text {
+  width: 900px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+.our-vision-text p {
+  font-size: 17px;
+  line-height: 29px;
+  text-align: center;
+}
+/* meeting section background img */
+.bg-meeting-img {
+  background-image: url(../img/meeting.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  height: 700px;
+  background-size: cover;
+}
+/* partner profile*/
+.headding-our-attorneys {
+  display: table;
+  margin: 0 auto;
+}
+.headding-our-attorneys h1 {
+  font-size: 40px;
+  font-weight: 100;
+  margin: 70px;
+  text-align: center;
+}
+.profile-wrapper {
+  background-color: #eaf4f6;
+}
+.partner-profile {
+  display: flex;
+  margin: 0 auto;
+  width: 900px;
+  padding-bottom: 50px;
+}
+.allabot-partners {
+  text-align: center;
+  font-family: sans-serif;
+  margin: 0 auto;
+}
+.partner-img {
+  width: 200px;
+}
+.allabot-partners h4 {
+  padding: 10px 5px;
+  font-size: 20px;
+  font-weight: 100;
+  color: #00305b;
+}
+.allabot-partners p {
+  font-size: 17px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #356999;
+  color: #356999;
+  margin: 0px 50px;
+}
+.allabot-partners i {
+  padding: 20px 5px;
+  display: block;
+  line-height: 23px;
+  color: #5a7b96;
+}
+
+/* contact or emailer css*/
+.contact-wrapper {
+  background-image: url(../img/building-background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 600px;
+  color: white;
+}
+.allabout-contact {
+  background-color: rgba(5, 59, 107, 0.77);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.contact-heading {
+  width: 450px;
+  display: inline-block;
+  height: 550px;
+  position: relative;
+  background-color: rgba(6, 9, 49, 0.46);
+}
+.contact-heading h1 {
+  font-size: 40px;
+  font-family: sans-serif;
+  line-height: 50px;
+  font-weight: 100;
+  float: right;
+  padding: 100px 50px 0 0px;
+  width: 260px;
+}
+.contact-info {
+  display: inline-block;
+  vertical-align: top;
+  margin: 100px 0 0 30px;
+  font-family: sans-serif;
+}
+.contact-details h2 {
+  font-size: 30px;
+  font-weight: 100;
+  margin-bottom: 25px;
+}
+.contact-details p {
+  line-height: 26px;
+  font-size: 17px;
+}
+.contact-details a {
+  margin: 25px 0;
+  display: table;
+  color: #fafafa;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.send-email {
+  display: flex;
+  margin-top: 20px;
+}
+.partision {
+  display: inline-block;
+  margin-right: 10px;
+}
+.partision p {
+  margin: 7px 0;
+}
+.partision input:hover {
+  background-color: #a3cdf7;
+}
+.partision input {
+  width: 300px;
+  height: 27px;
+  padding: 0px 7px;
+  font-size: 14px;
+}
+
+.Message-area p {
+  margin-bottom: 13px;
+}
+.textarea-bg:hover {
+  background-color: #a3cdf7;
+}
+.textarea-bg {
+  padding: 2px 6px;
+}
+.submit:hover {
+  background-color: #00305b;
+}
+.submit {
+  width: 100%;
+  height: 35px;
+  margin: 15px 0;
+  background-color: #205790;
+  color: white;
+  font-size: 20px;
+  border: 1px solid white;
+}
+.back-to-top {
+  width: 100%;
+  background-color: #00305b;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+.back-to-top button:hover {
+  background-color: rgba(232, 228, 228, 0.6);
+  border-radius: 50%;
+  color: black;
+}
+.back-to-top button {
+  width: 20px;
+  background-color: #00305b;
+  color: white;
+  font-size: 20px;
+  outline: none;
+}
+.back-to-top p {
+  margin-top: 5px;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+.footer {
+  padding: 35px;
+  margin-left: 70px;
+}
+.creat-with {
+  color: #5988b9;
+}
+.apply-onclik {
+  display: none;
+}
+.your-qustions {
+  width: 330px;
+  color: white;
+  float: right;
+  margin-right: 20px;
+  font-family: sans-serif;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.part1-qustion {
+  background-color: #1f4e83;
+  padding: 70px 20px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 15px;
+}
+.cross-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #1f4e83;
+  font-size: 15px;
+  color: white;
+  width: 20px;
+}
+.chat-midde-space {
+  width: 100%;
+  height: 200px;
+  background-color: white;
+}
+.sponsor p {
+  background-color: #c5c5c5;
+  text-align: center;
+  font-size: 13px;
+  padding: 10px 0;
+}
+.my-input1 {
+  width: 100%;
+  height: 40px;
+  padding: 0px 3px;
+  border-radius: 5px;
+}
+.attch-files-to-button {
+  position: absolute;
+  bottom: 9px;
+  right: 20px;
+  overflow: hidden;
+}
+.send-font {
+  margin-right: 20px;
+  transform: rotate(55deg);
+}
+.input-chat-us i {
+  color: black;
+  font-size: 20px;
+}
+.my-input2 {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.chat-with-us {
+  width: 330px;
+  background-color: #1f4e83;
+  color: white;
+  float: right;
+  margin-right: 20px;
+  padding: 15px 20px;
+  font-family: sans-serif;
+  background-attachment: fixed;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.chat-with-us h4 {
+  font-size: 15px;
+  font-weight: 100;
+  padding-bottom: 3px;
+}
+.chat-with-us p {
+  font-size: 12px;
+}
+.chat-with-us span {
+  font-size: 12px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.chat-with-us button:hover {
+  background-color: #c9d9e647;
+}
+
+.chat-with-us button {
+  position: absolute;
+  top: 20px;
+  left: 290px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #1f4e83;
+  text-decoration: none;
+  color: white;
+  outline: none;
+}
+.mobile-chat-button {
+  display: none;
+}
+
+/*media css tablet*/
+
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
+  .company-logo-img {
+    margin-left: 0px;
+  }
+
+  .header-points {
+    display: none;
+  }
+  .website-bg {
+    min-height: 735px;
+  }
+  .company-name {
+    width: 450px;
+    background-color: rgba(202, 141, 232, 0.6);
+  }
+
+  .name-formating {
+    top: 130px;
+    left: -119px;
+  }
+  .name-formating h2 {
+    font-size: 30px;
+  }
+  .name-formating h3 {
+    font-size: 20px;
+  }
+  .name-formating p {
+    font-size: 15px;
+  }
+}
+/* media css mobile version */
+
+@media only screen and (min-width: 1px) and (max-width: 640px) {
+  .company-logo-img {
+    margin-left: 0px;
+  }
+  .header {
+    padding: 25px 15px;
+  }
+  .header-points {
+    display: none;
+  }
+  .header p {
+    font-size: 20px;
+    width: 150px;
+    line-height: 20px;
+  }
+  .mobile-menu-button {
+    display: block;
+  }
+  .mobile-menu-list {
+    display: none;
+  }
+  .allabout-company-logo {
+    margin-left: 0;
+  }
+  .website-bg {
+    width: 100%;
+    min-height: 500px;
+    background-attachment: unset;
+  }
+  .company-name {
+    width: 370px;
+    top: 70px;
+    right: 0;
+    height: 370px;
+    left: auto;
+  }
+  .name-formating {
+    padding: 0 15px;
+    left: 0;
+  }
+  .name-formating h2 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  .name-formating h3 {
+    font-size: 40px;
+    font-weight: 100;
+    margin-bottom: 10px;
+  }
+  .name-formating p {
+    font-size: 22px;
+    line-height: 35px;
+  }
+  .about-company p {
+    width: 300px;
+    font-size: 15px;
+  }
+  .heading-practice-area {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .heading-practice-area span {
+    padding: 0;
+    float: none;
+  }
+  .headding-our-vision h1 {
+    margin: 50px 0;
+  }
+  .our-vision-text {
+    width: 100%;
+    padding: 20px;
+  }
+  .headding-our-attorneys h1 {
+    margin: 50px 0;
+    font-size: 30px;
+  }
+  .info-practice-area {
+    margin: 0;
+    width: 100%;
+    padding-left: 20px;
+  }
+  .practice-area-imp {
+    max-width: 0;
+    display: block;
+  }
+  .bg-meeting-img {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: unset;
+    height: 256px;
+    background-attachment: unset;
+  }
+  .section-wrapper {
+    width: 100%;
+  }
+  .partner-profile {
+    width: 100%;
+    display: block;
+  }
+  .allabot-partners {
+    margin-bottom: 60px;
+  }
+  .partner-img {
+    width: 240px;
+  }
+  .contact-heading h1 {
+    float: none;
+    padding: 50px 10px;
+    width: 100%;
+  }
+  .contact-heading {
+    width: 100%;
+    height: auto;
+  }
+  .contact-info {
+    margin: 0;
+    width: 100%;
+    padding: 20px;
+  }
+  .contact-wrapper {
+    height: 1200px;
+  }
+
+  .send-email {
+    display: block;
+  }
+  .contact-info p {
+    font-size: 23px;
+    line-height: 32px;
+  }
+  .partision {
+    margin: 0;
+    width: 100%;
+  }
+  .partision input {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+  }
+  .textarea-bg {
+    padding: 5px;
+    width: 100%;
+    font-size: 20px;
+  }
+  .back-to-top {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .footer {
+    margin-left: 0;
+    padding: 35px 0;
+    width: 100%;
+  }
+  .footer p {
+    text-align: center;
+    line-height: 22px;
+  }
+  .chat-with-us {
+    margin-right: 0;
+    float: none;
+    left: 0;
+    width: 100%;
+    display: none !important;
+  }
+  .mobile-chat-button {
+    display: block;
+  }
+  .mobile-chat-button button {
+    background-color: #205790;
+    color: white;
+    width: 70px;
+    border-radius: 50%;
+    height: 70px;
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    outline: none;
+  }
+  .mobile-chat-button i {
+    font-size: 30px;
+  }
+  .your-qustions {
+    margin: 0;
+    width: 100%;
+  }
+  .part1-qustion {
+    padding: 100px 20px;
+    line-height: 32px;
+    font-size: 18px;
+  }
+  .chat-midde-space {
+    width: 100%;
+    height: 330px;
+  }
+  .my-input1 {
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+  }
+}
