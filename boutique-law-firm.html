@@ -45,11 +45,14 @@
         var display = show ? "block" : 'none'
         var changeDisplay = document.querySelector(".apply-onclik");
         changeDisplay.style.display = display;
+        var chatButton = document.getElementById("chat-button");
+        chatButton.style.display = !show ? "block" : "none";
       }
 
       function toggleChatFooterBar(isShow) {
         var n = document.querySelector(".chat-with-us");
         n.style.display = isShow ? "block" : 'none';
+       
       }
     </script>
 
@@ -72,10 +75,8 @@
       var isCliked = false;
       
       function myFunctio(){
-        // 
         var menuButton = document.querySelector(".click-button");
         var list = document.querySelector(".mobile-menu-list");
-
         if(isCliked == false){
           menuButton.classList.add("menu-cut-bar");
           list.style.display="block";
@@ -84,11 +85,19 @@
         }else{
           menuButton.classList.remove("menu-cut-bar");
           list.style.display = "none";
-          console.log("two");
+           console.log("one");
           isCliked = false;
         }
       }
-    </script>
+      </script>
+      <script>
+        function remoMenuList(){
+          var menuButton = document.querySelector(".click-button");
+          var list = document.querySelector(".mobile-menu-list");
+          menuButton.classList.remove("menu-cut-bar");
+          list.style.display = "none";
+        }
+      </script>
     <script>
       function textOpycity(){
         var x = document.querySelectorAll(".textopycity");
@@ -125,16 +134,16 @@
         </div>
       <div class="mobile-menu-list">
             <ul>
-              <li><a href="">HOME</a></li>
-              <li><a href="#practice-area">PRACTIC AREA</a></li>
-              <li><a href="#our-vision">OUR VISION</a></li>
-              <li><a href="#attorneys">ATTORNEYS</a></li>
-              <li><a href="#contact">CONTACT</a></li>
+              <li><a href="#home" onclick="remoMenuList()">HOME</a></li>
+              <li><a href="#practice-area" onclick="remoMenuList()" >PRACTIC AREA</a></li>
+              <li><a href="#our-vision"  onclick="remoMenuList()">OUR VISION</a></li>
+              <li><a href="#attorneys" onclick="remoMenuList()">ATTORNEYS</a></li>
+              <li><a href="#contact" onclick="remoMenuList()">CONTACT</a></li>
             </ul>
         </div>
       </div>
     </section>
-    <section class="website-bg">
+    <section class="website-bg" id="home">
       <div class="company-name">
         <div class="name-formating textopycity">
           <h2>BOUTIQUE</h2>
@@ -305,15 +314,15 @@
           </div>
           <form class="input-chat-us">
             <input type="text" placeholder="Type your message" class="my-input1">
+            <button class="send-font"><i class="fas fa-paper-plane"></i></button>
             <div class="attch-files-to-button">
-              <button class="send-font"><i class="fas fa-paper-plane"></i></button>
               <i class="fas fa-paperclip"></i><input type="file" name='upload' class="my-input2">
             </div>
           </form>
         </div>
       </div>
       <div class="mobile-chat-button">
-        <button onclick="changeVision(true)"><i class="fas fa-comment-alt"></i></button>
+        <button id="chat-button" onclick="changeVision(true)"><i class="fas fa-comment-alt"></i></button>
       </div>
       <div class="chat-with-us">
         <h4>CHAT WITH US</h4>

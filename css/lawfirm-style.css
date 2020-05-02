@@ -62,7 +62,7 @@ html {
   position: relative;
 }
 .mobile-menu-button button {
-  background-color: white;
+  background-color: #f9f9fb;
   outline: none;
   width: 30px;
 }
@@ -140,7 +140,7 @@ html {
   left: 0;
 }
 .textopycity {
-  transition-duration: 5s;
+  transition-duration: 3s;
   opacity: 0;
 }
 
@@ -246,7 +246,6 @@ html {
 }
 .practice-area-imp h4 {
   font-size: 20px;
-  width: 300px;
   padding-bottom: 15px;
   font-weight: 300;
   color: #00305b;
@@ -520,13 +519,17 @@ html {
 }
 .attch-files-to-button {
   position: absolute;
-  bottom: 9px;
-  right: 20px;
+  bottom: 17px;
+  right: 12px;
   overflow: hidden;
 }
 .send-font {
   margin-right: 20px;
   transform: rotate(55deg);
+  position: absolute;
+  bottom: 20px;
+  right: 37px;
+  overflow: hidden;
 }
 .input-chat-us i {
   color: black;
@@ -587,7 +590,10 @@ html {
 .mobile-chat-button {
   display: none;
 }
-
+/* wix.html css */
+.wix-page-img {
+  width: 100%;
+}
 /*media css tablet*/
 
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
@@ -652,7 +658,7 @@ html {
     background-attachment: unset;
   }
   .company-name {
-    width: 370px;
+    width: 320px;
     top: 70px;
     right: 0;
     height: 370px;
@@ -674,6 +680,7 @@ html {
   .name-formating p {
     font-size: 22px;
     line-height: 35px;
+    width: 100%;
   }
   .about-company p {
     width: 300px;
@@ -706,8 +713,19 @@ html {
     padding-left: 20px;
   }
   .practice-area-imp {
-    max-width: 0;
+    width: 100%;
     display: block;
+    animation: textmove 3s;
+    animation-iteration-count: 1;
+  }
+  /* animation text right to left right */
+  @keyframes textmove {
+    from {
+      left: 100px;
+    }
+    to {
+      left: 0px;
+    }
   }
   .bg-meeting-img {
     background-size: 100%;
@@ -816,7 +834,6 @@ html {
   }
   .chat-midde-space {
     width: 100%;
-    height: 330px;
   }
   .my-input1 {
     width: 100%;
