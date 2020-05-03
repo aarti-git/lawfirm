@@ -253,7 +253,7 @@ html {
 }
 .practice-area-imp p {
   width: 240px;
-  font-size: 14px;
+  font-size: 16px;
   display: inline-block;
   line-height: 27px;
   color: #285f91;
@@ -508,8 +508,11 @@ html {
 .sponsor p {
   background-color: #c5c5c5;
   text-align: center;
-  font-size: 13px;
-  padding: 10px 0;
+  font-size: 17px;
+  padding: 12px 0;
+}
+.input-chat-us {
+  position: relative;
 }
 .my-input1 {
   width: 100%;
@@ -663,10 +666,15 @@ html {
     right: 0;
     height: 370px;
     left: auto;
+    overflow: hidden;
   }
   .name-formating {
     padding: 0 15px;
     left: 0;
+  }
+  .animatleft-to-right {
+    animation: textmove 3s;
+    animation-iteration-count: 1;
   }
   .name-formating h2 {
     font-size: 50px;
@@ -711,6 +719,7 @@ html {
     margin: 0;
     width: 100%;
     padding-left: 20px;
+    overflow: hidden;
   }
   .practice-area-imp {
     width: 100%;
@@ -721,7 +730,7 @@ html {
   /* animation text right to left right */
   @keyframes textmove {
     from {
-      left: 100px;
+      left: 150px;
     }
     to {
       left: 0px;
@@ -795,8 +804,9 @@ html {
     padding: 35px 0;
     width: 100%;
   }
-  .footer p {
-    text-align: center;
+  .part1-qustion p {
+    width: 200px;
+    margin: 0 auto;
     line-height: 22px;
   }
   .chat-with-us {
@@ -826,6 +836,7 @@ html {
   .your-qustions {
     margin: 0;
     width: 100%;
+    height: 100%;
   }
   .part1-qustion {
     padding: 100px 20px;
@@ -834,6 +845,8 @@ html {
   }
   .chat-midde-space {
     width: 100%;
+    background-color: white;
+    height: calc(100% - 420px);
   }
   .my-input1 {
     width: 100%;

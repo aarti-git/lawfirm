@@ -1,1 +1,1 @@
-require("lolhost")(8000);
+require("lolhost")(1000);
